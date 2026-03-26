@@ -25,17 +25,53 @@ smartpredict-mlops/
 
 Utilisateur → Next.js (frontend) → NestJS (backend) → FastAPI (ml-service) → modèle ML → retour UI
 
-## ⚙️ Setup rapide
+
+## ⚙️ Étapes de lancement détaillées
 
 1. **Cloner le repo**
+   ```bash
+   git clone <url-du-repo>
+   cd smartpredict-mlops
+   ```
+
 2. **Installer les dépendances**
-   - Frontend : `cd frontend && npm install`
-   - Backend : `cd backend && npm install`
-   - ML service : `cd ml-service && pip install -r requirements.txt` (à créer)
+   - **Frontend** :
+     ```bash
+     cd frontend
+     npm install
+     cd ..
+     ```
+   - **Backend** :
+     ```bash
+     cd backend
+     npm install
+     cd ..
+     ```
+   - **ML service** :
+     ```bash
+     cd ml-service
+     pip install -r requirements.txt
+     cd ..
+     ```
+
 3. **Entraîner le modèle ML**
-   - `cd ml-service && python train.py`
-4. **Lancer en local**
-   - `docker-compose up --build`
+   ```bash
+   cd ml-service
+   python train.py
+   cd ..
+   ```
+
+4. **Lancer tous les services avec Docker Compose**
+   ```bash
+   docker-compose up --build
+   ```
+
+5. **Tester l’API ML directement**
+   - Accéder à : [http://localhost:8000/predict?surface=75](http://localhost:8000/predict?surface=75)
+
+6. **Accéder à l’application**
+   - Frontend : [http://localhost:3000](http://localhost:3000)
+   - Backend API : [http://localhost:3001/predict?surface=75](http://localhost:3001/predict?surface=75)
 
 ## 🧪 Test API ML
 
