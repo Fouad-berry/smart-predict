@@ -100,5 +100,3 @@ Utilisateur → Next.js (frontend) → NestJS (backend) → FastAPI (ml-service)
 - Tests E2E (Playwright)
 
 ---
-
-**Projet prêt à l’emploi pour portfolio ou entretien technique !**
